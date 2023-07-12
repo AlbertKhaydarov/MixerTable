@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     
     private func animateTableView() {
         tableView.reloadData()
-        var delay = 0.0
+        var delay = 0.01
         let cells = tableView.visibleCells
         
         func makeList(_ n: [UITableViewCell]) -> [UITableViewCell] {
@@ -78,10 +78,10 @@ class ViewController: UIViewController {
             let rotationAngle = CGFloat(degree * Double.pi / 180)
             let rotationTransform = CATransform3DMakeRotation(rotationAngle, 1, 0, 0)
             cell.layer.transform = rotationTransform
-            UIView.animate(withDuration: 0.1, delay: 0.05 * Double(delay), options: .curveEaseInOut) {
+            UIView.animate(withDuration: 0.1, delay: 0.03 * Double(delay), options: .curveEaseInOut) {
                 cell.layer.transform  =  CATransform3DIdentity
             }
-            delay += 0.5
+            delay += 0.4
         }
     }
 }
