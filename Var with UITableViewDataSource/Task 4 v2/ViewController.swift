@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
         rightBarButtonItem.tintColor = .systemBlue
     }
+    
     @objc func shuffleButtonTapped(){
         data.shuffle()
         animateTableView()
